@@ -1,0 +1,16 @@
+=== Reduced brute-force (educational) ===
+Plaintext : 0x5345435552495459
+Ciphertext: 0x9549A29ABC5A5B27
+Secret pc1_8 (low bits searched): 0x2A
+
+n_bits     space   found     seconds
+     8       256      42    0.009124
+    10      1024   (est)    0.036497  # extrapolated from 3.564e-05 s/guess
+    12      4096   (est)    0.145989  # extrapolated from 3.564e-05 s/guess
+    14     16384   (est)    0.583958  # extrapolated from 3.564e-05 s/guess
+
+Interpretación:
+  Tras Odd/Even, atacar las subclaves Ki por fuerza bruta no aporta:
+  son fijas. El residuo searchable aquí es pc1_8 (8 bits) vía K-D.
+  En DES clásico el espacio sería ~2^56; la diferencia ilustra por qué
+  KE-DES no es criptográficamente seguro.

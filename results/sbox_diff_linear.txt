@@ -1,0 +1,26 @@
+=== S-box differential & linear analysis (educational) ===
+
+Intuición diferencial: ¿qué tan a menudo una diferencia de entrada
+din produce una diferencia de salida dout? La DDT cuenta eso.
+Intuición lineal: ¿qué tan a menudo una combinación XOR de bits de
+entrada coincide con una de salida? El bias mide el sesgo respecto a 1/2.
+
+S1: max DDT count=16/64 (din=0x34 -> dout=0x2)  prob≈0.250;  best linear bias=0.281 (a=0x10, b=0xF)
+S2: max DDT count=16/64 (din=0x08 -> dout=0xA)  prob≈0.250;  best linear bias=0.250 (a=0x22, b=0xB)
+S3: max DDT count=16/64 (din=0x20 -> dout=0xD)  prob≈0.250;  best linear bias=0.250 (a=0x22, b=0xF)
+S4: max DDT count=16/64 (din=0x01 -> dout=0x5)  prob≈0.250;  best linear bias=0.250 (a=0x22, b=0xF)
+S5: max DDT count=16/64 (din=0x05 -> dout=0xA)  prob≈0.250;  best linear bias=0.312 (a=0x10, b=0xF)
+S6: max DDT count=16/64 (din=0x01 -> dout=0xD)  prob≈0.250;  best linear bias=0.219 (a=0x10, b=0x7)
+S7: max DDT count=16/64 (din=0x18 -> dout=0x1)  prob≈0.250;  best linear bias=0.281 (a=0x3B, b=0x4)
+S8: max DDT count=16/64 (din=0x01 -> dout=0x5)  prob≈0.250;  best linear bias=0.250 (a=0x10, b=0xF)
+
+Lectura para KE-DES:
+  Las S-boxes son las mismas que DES, así que las DDT/LAT locales
+  coinciden. Lo que cambia es la expansión: K-D inyecta bits de clave
+  (pc1_8 y 8 bits de Ki) junto a R, en lugar de la E fija de DES.
+  Eso altera cómo se propagan diferencias/aproximaciones entre rondas,
+  pero la debilidad dominante de KE-DES es el colapso de clave por Odd/Even,
+  no un rediseño de las S-boxes.
+
+Limitación académica: esto NO es un ataque completo de 16 rondas;
+sirve para entender las piezas y discutir el paper con rigor de curso.

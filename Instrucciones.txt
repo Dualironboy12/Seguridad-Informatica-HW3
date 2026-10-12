@@ -1,0 +1,24 @@
+Due Date: Wednesday, 14 October 2026, 11:59 PM
+
+
+Key-Based Enhancement of DES (KE-DES) and the Enigma Machine
+
+In this assignment, students will explore an enhanced version of the Data Encryption Standard (DES) algorithm [1], referred to as KE-DES (Key-based Enhanced DES) [2]. Although KE-DES is not cryptographically secure, its operations are quite similar to those of the original DES algorithm. To complete this task, students should read the description of KE-DES available on the Blackboard website.
+
+
+
+All homework reports must include the following sections: cover page, abstract, introduction, methodology, results and discussion, conclusions, and bibliography. All figures, tables, and references included in the bibliography should be cited in the main text.
+
+
+The cover page with the following general information should be provided:
+
+Title and Homework # • Student Name • ID • Course • Date • Autumn Term
+
+
+Each team member must upload the report as a PDF file (HWX_ID_ID_ID.pdf) to the Learning and Assessment Resources module on the Blackboard website. Otherwise, it will be graded with 0.0
+
+
+Collaboration is encouraged; however, teams are limited to a maximum of three students.
+
+
+All assignments are due on the date specified. Late submissions will not be accepted!

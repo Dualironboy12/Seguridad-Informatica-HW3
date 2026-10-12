@@ -1,0 +1,17 @@
+=== Keyspace experiment: Odd/Even ===
+
+DES teórico: ~2^56 claves efectivas (ignorando paridad).
+Tras Odd/Even en KE-DES (alineado a Tablas III/IV):
+  Distinct Odd/Even outputs on samples : 1
+  Distinct round-key schedules         : 1
+  Distinct pc1_8 values (for K-D)      : 4
+
+Odd/Even output (56 bits):
+  01010101010101010101010101011010101010101010101010101010
+
+Conclusión didáctica:
+  La transformación fija C0||D0 con independencia de la clave de entrada,
+  por lo que K1..K16 son idénticas para todas las claves.
+  Solo pc1_8 (8 bits de PC-1 previos a Odd/Even) aporta diversidad
+  residual vía la función K-D → a lo sumo 2^8 comportamientos distintos
+  por ese canal, mucho menor que 2^56.
